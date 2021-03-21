@@ -1,5 +1,6 @@
 import click
 import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from imblearn.under_sampling import RandomUnderSampler
@@ -14,6 +15,10 @@ to target 20-29 group
 '''
 
 
+RANDOM_SEED = 137
+np.random.seed(RANDOM_SEED)
+
+
 NEWAGE = {
     "20-29": "20-29",
     "30-39": "rest",
@@ -25,7 +30,7 @@ NEWAGE = {
 
 @click.command()
 @click.option("--data", type=click.Path(exists=True),
-              default="data/train.csv")
+              default="data/data.csv")
 def main(data):
     df = pd.read_csv(data).fillna("UNK")
     df["age*"] = df["age"].map(NEWAGE)
@@ -40,6 +45,7 @@ def main(data):
 
     model = build_model()
     model.fit(X_tr_resampled, y_tr_resampled)
+    # model.fit(X_tr, y_tr)
 
     print("Done fitting")
 

@@ -1,10 +1,15 @@
 import click
 import pandas as pd
+import numpy as np
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 
 from model.build import build_model
+
+
+RANDOM_SEED = 137
+np.random.seed(RANDOM_SEED)
 
 
 SAMPLE_WEIGHTS = {
