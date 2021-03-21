@@ -1,0 +1,9 @@
+setuptools
+jupyter
+pandas
+pytest
+click
+matplotlib
+seaborn
+scikit-learn
+
