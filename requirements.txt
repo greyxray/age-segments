@@ -6,4 +6,4 @@ click
 matplotlib
 seaborn
 scikit-learn
-
+user-agents
