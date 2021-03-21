@@ -1,4 +1,4 @@
-# Age segments
+# Age segments [![Build Status](https://travis-ci.com/greyxray/age-segments.svg?branch=master)](https://travis-ci.com/greyxray/age-segments)
 ## Prepare clean python env
 
 ```bash
