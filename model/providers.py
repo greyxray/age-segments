@@ -1,10 +1,11 @@
-'''
-Check on which provider to use
-'''
-
 import click
 import pandas as pd
 import matplotlib.pyplot as plt
+
+
+'''
+Check which provider to use
+'''
 
 
 def hist(x, label, c="b"):

@@ -8,6 +8,11 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 
+'''
+Building the model
+'''
+
+
 class PandasSelector(BaseEstimator, TransformerMixin):
     def __init__(self, columns=None, records=False):
         self.columns = columns
