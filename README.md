@@ -4,7 +4,6 @@
 pyenv install 3.8.3
 pyenv virtualenv 3.8.3 myenv
 pyenv local myenv
-pip install -e .
 ```
 
 # Install
